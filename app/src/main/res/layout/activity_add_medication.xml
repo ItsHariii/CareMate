@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- LinearLayout container for displaying entered medications -->
+        <LinearLayout
+            android:id="@+id/tvMedicationsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/etMedicationName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Enter Medication Name"
+                android:padding="12dp" />
+
+            <ImageButton
+                android:id="@+id/btnSendMedication"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/circular_button"
+                android:contentDescription="Send Medication"
+                android:elevation="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnScanMedication"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circular_button"
+            android:contentDescription="Scan Medication"
+            android:elevation="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera" />
+    </LinearLayout>
+</RelativeLayout>
